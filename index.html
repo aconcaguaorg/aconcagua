@@ -341,7 +341,8 @@
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    min-width: 140px;
+    min-width: 175px;
+    flex-shrink: 0;
   }
   .areas-list {
     margin-top: 8px;
@@ -659,23 +660,78 @@
   }
   .footer-logo-mark svg { width: 18px; height: 18px; fill: var(--white); }
 
-  /* Mobile */
+  /* ─── TABLET ─── */
   @media (max-width: 900px) {
-    nav { padding: 0 24px; }
-    .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--blue-dark); padding: 16px 24px 24px; gap: 4px; }
+    nav { padding: 0 20px; height: 60px; }
+    .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: var(--blue-dark); padding: 12px 20px 20px; gap: 2px; z-index: 999; }
     .nav-links.open { display: flex; }
+    .nav-links a { font-size: 14px; padding: 10px 12px; }
     .hamburger { display: flex; }
-    #home { padding: 100px 24px 80px; }
-    .hero-stats { position: relative; bottom: auto; right: auto; margin-top: 48px; justify-content: flex-start; flex-wrap: wrap; }
-    .pillars { grid-template-columns: 1fr 1fr; padding: 40px 24px; gap: 1px; background: #e8e8e8; }
-    .pillar { background: var(--white); border-right: none; }
-    section { padding: 64px 24px; }
-    .quienes-grid, .sumate-split, .area-panel.active { grid-template-columns: 1fr; gap: 40px; }
+    .lang-switcher { margin-right: 10px; }
+    #home { padding: 90px 20px 60px; min-height: 100svh; }
+    .hero-title { font-size: clamp(28px, 7vw, 44px); }
+    .hero-subtitle { font-size: 14px; }
+    .hero-stats { position: relative; bottom: auto; right: auto; margin-top: 40px; justify-content: flex-start; flex-wrap: wrap; gap: 20px; }
+    .hero-stat .num { font-size: 32px; }
+    .pillars { grid-template-columns: 1fr 1fr; padding: 32px 20px; gap: 1px; background: #e8e8e8; }
+    .pillar { background: var(--white); border-right: none; padding: 24px 20px; }
+    section { padding: 56px 20px; }
+    .quienes-grid { grid-template-columns: 1fr; gap: 32px; }
+    .sumate-split { grid-template-columns: 1fr; gap: 32px; }
+    .area-panel.active { grid-template-columns: 1fr; gap: 32px; }
+    .area-visual { position: static; }
+    .valores-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .footer-top { grid-template-columns: 1fr; gap: 32px; }
+    footer { padding: 40px 20px 28px; }
+    .transp-cta-box { flex-direction: column; align-items: flex-start; padding: 28px; }
+    .areas-tabs { gap: 6px; }
+    .tab-btn { font-size: 12px; padding: 8px 14px; }
+    .sumate-card { padding: 40px 28px; }
+    .mv-card { padding: 22px 24px; }
+    .estructura { padding: 28px; }
+    .nav-logo-text { font-size: 13px; }
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 520px) {
+    nav { padding: 0 16px; height: 58px; }
+    .nav-links { top: 58px; padding: 10px 16px 18px; }
+    .nav-logo-text { display: none; }
+    .lang-switcher { margin-right: 6px; }
+    #home { padding: 80px 16px 48px; }
+    .hero-title { font-size: clamp(26px, 8vw, 36px); line-height: 1.1; }
+    .hero-subtitle { font-size: 13px; margin-bottom: 32px; }
+    .hero-actions { flex-direction: column; gap: 12px; }
+    .hero-actions a { text-align: center; padding: 14px 24px; }
+    .hero-stats { gap: 16px; }
+    .hero-stat .num { font-size: 28px; }
+    .hero-stat .lbl { font-size: 10px; }
+    .pillars { grid-template-columns: 1fr; }
+    .pillar { padding: 20px 16px; border-bottom: 1px solid #e8e8e8; }
+    section { padding: 48px 16px; }
+    h2.section-title { font-size: clamp(22px, 6vw, 32px); }
+    .section-lead { font-size: 14px; margin-bottom: 36px; }
     .valores-grid { grid-template-columns: 1fr; }
-    .footer-top { grid-template-columns: 1fr; gap: 36px; }
-    footer { padding: 40px 24px 32px; }
-    .transp-cta-box { flex-direction: column; align-items: flex-start; padding: 32px; }
-    .hero-stats { gap: 24px; }
+    .valor-card { padding: 24px 20px; }
+    .areas-tabs { flex-direction: column; }
+    .tab-btn { width: 100%; text-align: left; }
+    .area-panel-text h3 { font-size: 20px; }
+    .sub-item { padding: 16px 18px; }
+    .transp-cta-box { padding: 24px 20px; }
+    .btn-white { width: 100%; text-align: center; padding: 14px 20px; }
+    .contact-link { font-size: 13px; padding: 14px 16px; }
+    .sumate-card { padding: 32px 20px; border-radius: 14px; }
+    .sumate-card h3 { font-size: 20px; }
+    .footer-top { gap: 24px; }
+    footer { padding: 32px 16px 24px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .cd-role { min-width: 110px; font-size: 10px; }
+    .cd-list li { font-size: 12px; }
+    .estructura { padding: 22px 18px; }
+    .mv-card { padding: 18px 20px; }
+    .quienes-grid, .sumate-split { gap: 24px; }
+    .hero-bg-shape { width: 300px; height: 300px; }
+    .hero-bg-shape2 { display: none; }
   }
 
   /* ─── LANG SWITCHER ─── */
@@ -811,42 +867,41 @@
     <div class="quienes-grid">
       <div class="quienes-text">
         <div class="section-eyebrow"><span data-es>Quiénes Somos</span><span data-en style="display:none">About Us</span></div><h2 class="section-title"><span data-es>Una organización política construida desde las bases</span><span data-en style="display:none">A political organization built from the ground up</span></h2>
-        <p>Organización Aconcagua es una asociación político-social y comunitaria fundada en 2014, dedicada a la promoción, defensa y restitución integral de los Derechos Humanos en contextos de alta vulnerabilidad social del Conurbano Bonaerense y parajes rurales de Santiago del Estero.</p>
-        <p>A través de un modelo de gestión situado, participativo e interdisciplinario, desplegamos dispositivos de proximidad territorial, acompañamiento personalizado, economía de la cultura, perspectiva de género y prácticas de ambientalismo popular.</p>
+        <p><span data-es>Organización Aconcagua es una asociación político-social y comunitaria fundada en 2014, dedicada a la promoción, defensa y restitución integral de los Derechos Humanos en contextos de alta vulnerabilidad social del Conurbano Bonaerense y parajes rurales de Santiago del Estero.</span><span data-en style="display:none">Organización Aconcagua is a political-social and community association founded in 2014, dedicated to the promotion, defense and full restitution of Human Rights in highly vulnerable social contexts of Greater Buenos Aires and rural areas of Santiago del Estero.</span></p>
+        <p><span data-es>A través de un modelo de gestión situado, participativo e interdisciplinario, desplegamos dispositivos de proximidad territorial, acompañamiento personalizado, economía de la cultura, perspectiva de género y prácticas de ambientalismo popular.</span><span data-en style="display:none">Through a situated, participatory and interdisciplinary management model, we deploy territorial proximity tools, personalized support, cultural economy, gender perspective and popular environmentalism practices.</span></p>
         <div class="mision-vision">
           <div class="mv-card">
-            <h3>Misión</h3>
-            <p>Potenciar las capacidades colectivas y los recursos preexistentes de las comunidades, transformando el compromiso del voluntariado juvenil en herramientas técnico-políticas de articulación institucional que garanticen el pleno desarrollo de las infancias y aseguren la dignidad social.</p>
+            <h3><span data-es>Misión</span><span data-en style="display:none">Mission</span></h3><p><span data-es>Potenciar las capacidades colectivas y los recursos preexistentes de las comunidades, transformando el compromiso del voluntariado juvenil en herramientas técnico-políticas de articulación institucional que garanticen el pleno desarrollo de las infancias y aseguren la dignidad social.</span><span data-en style="display:none">To strengthen collective capacities and communities' existing resources, transforming youth volunteer commitment into technical-political tools for institutional coordination that guarantee children's full development and ensure social dignity.</span></p>
           </div>
           <div class="mv-card">
-            <h3>Visión</h3>
-            <p>Consolidarnos como un actor institucional de referencia técnica, metodológica y política en el diseño de proyectos de integración social, organización comunitaria, justicia ambiental y desarrollo cultural desde las bases.</p>
+            <h3><span data-es>Visión</span><span data-en style="display:none">Vision</span></h3><p><span data-es>Consolidarnos como un actor institucional de referencia técnica, metodológica y política en el diseño de proyectos de integración social, organización comunitaria, justicia ambiental y desarrollo cultural desde las bases.</span><span data-en style="display:none">To consolidate ourselves as an institutional actor of technical, methodological and political reference in the design of social integration projects, community organization, environmental justice and cultural development from the ground up.</span></p>
           </div>
         </div>
       </div>
       <div>
         <div class="estructura">
-          <h3>Nuestra Estructura</h3>
+          <h3><span data-es>Nuestra Estructura</span><span data-en style="display:none">Our Structure</span></h3>
           <ul class="cd-list">
-            <li><span class="cd-role">Presidencia</span> Carolina Eva Canosa</li>
-            <li><span class="cd-role">Vicepresidencia</span> Iñaki Mato</li>
-            <li><span class="cd-role">Secretaría</span> Carolina Horisberger</li>
-            <li><span class="cd-role">Tesorería</span> Juana Dalponte</li>
-            <li><span class="cd-role">Revisor de Cuentas</span> Juan Ignacio Cesare</li>
-            <li><span class="cd-role">Revisor de Cuentas II</span> Malena Narejko</li>
-            <li><span class="cd-role">Vocal I</span> Julia Petit</li>
-            <li><span class="cd-role">Vocal II</span> Cynthia Véliz</li>
+            <li><span class="cd-role"><span data-es>Fundadora</span><span data-en style="display:none">Founder</span></span> Florencia García Balerna</li>
+            <li><span class="cd-role"><span data-es>Presidencia</span><span data-en style="display:none">President</span></span> Carolina Eva Canosa</li>
+            <li><span class="cd-role"><span data-es>Vicepresidencia</span><span data-en style="display:none">Vice President</span></span> Iñaki Mato</li>
+            <li><span class="cd-role"><span data-es>Secretaría</span><span data-en style="display:none">Secretary</span></span> Carolina Horisberger</li>
+            <li><span class="cd-role"><span data-es>Tesorería</span><span data-en style="display:none">Treasurer</span></span> Juana Dalponte</li>
+            <li><span class="cd-role"><span data-es>Revisor de Cuentas</span><span data-en style="display:none">Auditor</span></span> Juan Ignacio Cesare</li>
+            <li><span class="cd-role"><span data-es>Revisor de Cuentas II</span><span data-en style="display:none">Auditor II</span></span> Malena Narejko</li>
+            <li><span class="cd-role"><span data-es>Vocal I</span><span data-en style="display:none">Board Member I</span></span> Julia Petit</li>
+            <li><span class="cd-role"><span data-es>Vocal II</span><span data-en style="display:none">Board Member II</span></span> Cynthia Véliz</li>
           </ul>
           <div class="areas-list">
-            <h4>Áreas de Trabajo</h4>
-            <span class="area-tag">Org. Comunitaria</span>
-            <span class="area-tag">Comunicación</span>
-            <span class="area-tag">Formación Política</span>
-            <span class="area-tag">Planificación</span>
-            <span class="area-tag">Coop. Internacional</span>
-            <span class="area-tag">Cultura</span>
-            <span class="area-tag">Género y Diversidades</span>
-            <span class="area-tag">Abordaje Calle</span>
+            <h4><span data-es>Áreas de Trabajo</span><span data-en style="display:none">Working Areas</span></h4>
+            <span class="area-tag"><span data-es>Org. Comunitaria</span><span data-en style="display:none">Community Org.</span></span>
+            <span class="area-tag"><span data-es>Comunicación</span><span data-en style="display:none">Communication</span></span>
+            <span class="area-tag"><span data-es><span data-es>Formación Política</span><span data-en style="display:none">Political Training</span></span><span data-en style="display:none">Political Training</span></span>
+            <span class="area-tag"><span data-es>Planificación</span><span data-en style="display:none">Planning</span></span>
+            <span class="area-tag"><span data-es><span data-es>Coop. Internacional</span><span data-en style="display:none">Intl. Cooperation</span></span><span data-en style="display:none">Intl. Cooperation</span></span>
+            <span class="area-tag"><span data-es>Cultura</span><span data-en style="display:none">Culture</span></span>
+            <span class="area-tag"><span data-es>Género y Diversidades</span><span data-en style="display:none">Gender & Diversity</span></span>
+            <span class="area-tag"><span data-es>Abordaje Calle</span><span data-en style="display:none">Street Outreach</span></span>
           </div>
         </div>
       </div>
@@ -861,33 +916,27 @@
     <div class="valores-grid">
       <div class="valor-card">
         <div class="valor-num">01</div>
-        <h3>Perspectiva Integral de Derechos Humanos</h3>
-        <p>Rechazamos las lógicas asistenciales fragmentadas o tutelares. Entendemos el acceso a la alimentación, la identidad formal, la educación y un hábitat digno como derechos inalienables.</p>
+        <h3><span data-es>Perspectiva Integral de Derechos Humanos</span><span data-en style="display:none">Comprehensive Human Rights Perspective</span></h3><p><span data-es>Rechazamos las lógicas asistenciales fragmentadas o tutelares. Entendemos el acceso a la alimentación, la identidad formal, la educación y un hábitat digno como derechos inalienables.</span><span data-en style="display:none">We reject fragmented or paternalistic assistance. We understand access to food, formal identity, education and decent housing as inalienable rights.</span></p>
       </div>
       <div class="valor-card">
         <div class="valor-num">02</div>
-        <h3>Gestión Situada y Co-construcción Territorial</h3>
-        <p>No intervenimos desde la intrusión externa. Respetamos los trayectos históricos, las memorias comunitarias y las dinámicas preexistentes de cada barrio o paraje rural.</p>
+        <h3><span data-es>Gestión Situada y Co-construcción Territorial</span><span data-en style="display:none">Situated Management & Territorial Co-construction</span></h3><p><span data-es>No intervenimos desde la intrusión externa. Respetamos los trayectos históricos, las memorias comunitarias y las dinámicas preexistentes de cada barrio o paraje rural.</span><span data-en style="display:none">We do not intervene from the outside. We respect the historical paths, community memories and pre-existing dynamics of each neighborhood or rural area.</span></p>
       </div>
       <div class="valor-card">
         <div class="valor-num">03</div>
-        <h3>Ambientalismo Popular y Justicia Social</h3>
-        <p>Militamos un ambientalismo situado que defiende el derecho a la salud comunitaria, promueve la soberanía alimentaria y la gestión colectiva de los recursos.</p>
+        <h3><span data-es>Ambientalismo Popular y Justicia Social</span><span data-en style="display:none">Popular Environmentalism & Social Justice</span></h3><p><span data-es>Militamos un ambientalismo situado que defiende el derecho a la salud comunitaria, promueve la soberanía alimentaria y la gestión colectiva de los recursos.</span><span data-en style="display:none">We advocate a situated environmentalism that defends the right to community health, promotes food sovereignty and collective resource management.</span></p>
       </div>
       <div class="valor-card">
         <div class="valor-num">04</div>
-        <h3>Rigurosidad Técnica y Profesionalismo</h3>
-        <p>Concebimos el compromiso social con la máxima responsabilidad operativa. El voluntariado se transforma en herramienta técnico-política de transformación real.</p>
+        <h3><span data-es>Rigurosidad Técnica y Profesionalismo</span><span data-en style="display:none">Technical Rigor & Professionalism</span></h3><p><span data-es>Concebimos el compromiso social con la máxima responsabilidad operativa. El voluntariado se transforma en herramienta técnico-política de transformación real.</span><span data-en style="display:none">We approach social commitment with the highest operational responsibility. Volunteering becomes a technical-political tool for real transformation.</span></p>
       </div>
       <div class="valor-card">
         <div class="valor-num">05</div>
-        <h3>Cultura como Motor de Inclusión</h3>
-        <p>Abrazamos la cultura, el arte popular y la formación en oficios como generadores de valor, empleo genuino y capital social frente a la exclusión que atraviesa a las juventudes.</p>
+        <h3><span data-es>Cultura como Motor de Inclusión</span><span data-en style="display:none">Culture as a Driver of Inclusion</span></h3><p><span data-es>Abrazamos la cultura, el arte popular y la formación en oficios como generadores de valor, empleo genuino y capital social frente a la exclusión que atraviesa a las juventudes.</span><span data-en style="display:none">We embrace culture, folk art and vocational training as generators of value, genuine employment and social capital against the exclusion facing today's youth.</span></p>
       </div>
       <div class="valor-card">
         <div class="valor-num">06</div>
-        <h3>Equidad, Infancias y No Discriminación</h3>
-        <p>Sostenemos el compromiso de transversalizar la perspectiva de género y diversidades y el interés superior de las niñeces en todas las dimensiones operativas.</p>
+        <h3><span data-es>Equidad, Infancias y No Discriminación</span><span data-en style="display:none">Equity, Children & Non-Discrimination</span></h3><p><span data-es>Sostenemos el compromiso de transversalizar la perspectiva de género y diversidades y el interés superior de las niñeces en todas las dimensiones operativas.</span><span data-en style="display:none">We uphold the commitment to mainstream gender and diversity perspectives and the best interests of children across all operational dimensions.</span></p>
       </div>
     </div>
   </div>
@@ -901,28 +950,23 @@
     <div class="areas-tabs">
       <button class="tab-btn active" onclick="showTab('comunitaria', this)"><span data-es>Organización Comunitaria</span><span data-en style="display:none">Community Organization</span></button>
       <button class="tab-btn" onclick="showTab('calle', this)"><span data-es>Abordaje en Calle</span><span data-en style="display:none">Street Outreach</span></button>
-      <button class="tab-btn" onclick="showTab('cultura', this)"><span data-es>Cultura</span><span data-en style="display:none">Culture</span></button>
+      <button class="tab-btn" onclick="showTab('cultura', this)"><span data-es><span data-es>Cultura</span><span data-en style="display:none">Culture</span></span><span data-en style="display:none">Culture</span></button>
       <button class="tab-btn" onclick="showTab('transversales', this)"><span data-es>Áreas Transversales</span><span data-en style="display:none">Cross-Cutting Areas</span></button>
     </div>
 
     <!-- Comunitaria -->
     <div class="area-panel active" id="panel-comunitaria">
       <div class="area-panel-text">
-        <h3>Organización Comunitaria y Territorial</h3>
-        <p>A través de un modelo de gestión situado y participativo, el área interviene en barrios y parajes con altos índices de vulnerabilidad con el objetivo de transformar realidades concretas, fortalecer las instituciones comunitarias y consolidar grupos motores vecinales.</p>
-        <p>No busca sustituir las dinámicas comunitarias existentes, sino potenciarlas: promueve la cohesión social, la construcción de identidad colectiva y el desarrollo de prácticas de participación sostenibles en el tiempo.</p>
+        <h3><span data-es>Organización Comunitaria y Territorial</span><span data-en style="display:none">Community & Territorial Organization</span></h3><p><span data-es>A través de un modelo de gestión situado y participativo, el área interviene en barrios y parajes con altos índices de vulnerabilidad con el objetivo de transformar realidades concretas, fortalecer las instituciones comunitarias y consolidar grupos motores vecinales.</span><span data-en style="display:none">Through a situated and participatory model, the area intervenes in neighborhoods and rural areas with high vulnerability levels, aiming to transform concrete realities, strengthen community institutions and consolidate neighborhood-driven groups.</span></p><p><span data-es>No busca sustituir las dinámicas comunitarias existentes, sino potenciarlas: promueve la cohesión social, la construcción de identidad colectiva y el desarrollo de prácticas de participación sostenibles en el tiempo.</span><span data-en style="display:none">It does not seek to replace existing community dynamics, but to strengthen them: promoting social cohesion, collective identity and sustainable participation practices over time.</span></p>
         <div class="sub-items">
           <div class="sub-item">
-            <h4>Comedor Pekenitos (2015–2021)</h4>
-            <p>Primer acercamiento al trabajo con infancias vulneradas. Apoyo escolar, actividades recreativas y promoción de derechos de niñas, niños y adolescentes, en articulación con una institución de asistencia alimentaria impulsada desde el barrio.</p>
+            <h4><span data-es>Comedor Pekenitos (2015–2021)</span><span data-en style="display:none">Pekenitos Community Kitchen (2015–2021)</span></h4><p><span data-es>Primer acercamiento al trabajo con infancias vulneradas. Apoyo escolar, actividades recreativas y promoción de derechos de niñas, niños y adolescentes, en articulación con una institución de asistencia alimentaria impulsada desde el barrio.</span><span data-en style="display:none">First engagement with vulnerable children. Academic support, recreational activities and promotion of children's rights, in coordination with a community-driven food assistance institution.</span></p>
           </div>
           <div class="sub-item">
-            <h4>Fisco Grande — Paraje Rural (Santiago del Estero)</h4>
-            <p>Intervención estratégica mediante viajes intensivos enfocados en el fortalecimiento edilicio e infraestructural de la Escuela Rural N° 638 y el desarrollo de soberanía alimentaria y comunitaria.</p>
+            <h4><span data-es>Fisco Grande — Paraje Rural (Santiago del Estero)</span><span data-en style="display:none">Fisco Grande — Rural Area (Santiago del Estero)</span></h4><p><span data-es>Intervención estratégica mediante viajes intensivos enfocados en el fortalecimiento edilicio e infraestructural de la Escuela Rural N° 638 y el desarrollo de soberanía alimentaria y comunitaria.</span><span data-en style="display:none">Strategic intervention through intensive trips focused on the building and infrastructural strengthening of Rural School N° 638 and the development of food and community sovereignty.</span></p>
           </div>
           <div class="sub-item">
-            <h4>Villa Recreo — Barrio Urbano (Banfield)</h4>
-            <p>Intervención orientada a mitigar dificultades en la alfabetización y el acceso a bienes culturales de infancias y juventudes, fortaleciendo capacidades colectivas con participación protagónica de los vecinos.</p>
+            <h4><span data-es>Villa Recreo — Barrio Urbano (Banfield)</span><span data-en style="display:none">Villa Recreo — Urban Neighborhood (Banfield)</span></h4><p><span data-es>Intervención orientada a mitigar dificultades en la alfabetización y el acceso a bienes culturales de infancias y juventudes, fortaleciendo capacidades colectivas con participación protagónica de los vecinos.</span><span data-en style="display:none">An intervention aimed at addressing literacy difficulties and access to cultural goods for children and youth, strengthening collective capacities with residents as the main actors.</span></p>
           </div>
         </div>
       </div>
@@ -930,14 +974,13 @@
         <div class="area-visual-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         </div>
-        <h4>Territorios activos</h4>
-        <p>Presencia continua en tres territorios con intervenciones adaptadas a las realidades y necesidades específicas de cada comunidad.</p>
+        <h4><span data-es>Territorios activos</span><span data-en style="display:none">Active territories</span></h4><p><span data-es>Presencia continua en tres territorios con intervenciones adaptadas a las realidades y necesidades específicas de cada comunidad.</span><span data-en style="display:none">Continuous presence in three territories with interventions tailored to the specific realities and needs of each community.</span></p>
         <div class="area-visual-tags">
           <span class="vtag">Lomas de Zamora</span>
           <span class="vtag">Banfield</span>
           <span class="vtag">Fisco Grande</span>
-          <span class="vtag">Infancias</span>
-          <span class="vtag">Soberanía Alimentaria</span>
+          <span class="vtag"><span data-es>Infancias</span><span data-en style="display:none">Children</span></span>
+          <span class="vtag"><span data-es>Soberanía Alimentaria</span><span data-en style="display:none">Food Sovereignty</span></span>
         </div>
       </div>
     </div>
@@ -945,20 +988,16 @@
     <!-- Calle -->
     <div class="area-panel" id="panel-calle">
       <div class="area-panel-text">
-        <h3>Abordaje en Situación de Calle</h3>
-        <p>Esta dimensión constituye el núcleo histórico y operativo que dio origen a Organización Aconcagua en 2014. El área aborda de manera integral la problemática de Personas en Situación de Calle (PPSC) en el municipio de Lomas de Zamora, desde una perspectiva de Derechos Humanos.</p>
+        <h3><span data-es>Abordaje en Situación de Calle</span><span data-en style="display:none">Street Homelessness Outreach</span></h3><p><span data-es>Esta dimensión constituye el núcleo histórico y operativo que dio origen a Organización Aconcagua en 2014. El área aborda de manera integral la problemática de Personas en Situación de Calle (PPSC) en el municipio de Lomas de Zamora, desde una perspectiva de Derechos Humanos.</span><span data-en style="display:none">This dimension is the historical and operational core that gave rise to Organización Aconcagua in 2014. The area comprehensively addresses the situation of People Experiencing Homelessness (PEH) in Lomas de Zamora, from a Human Rights perspective.</span></p>
         <div class="sub-items">
           <div class="sub-item">
-            <h4>Dispositivo de vinculación y aproximación territorial (2014–Presente)</h4>
-            <p>Intervenciones semanales programadas en centros urbanos del distrito. La distribución de asistencia alimentaria actúa como herramienta metodológica inicial para romper el aislamiento crítico y establecer canales de confianza mutua.</p>
+            <h4><span data-es>Dispositivo de vinculación y aproximación territorial (2014–Presente)</span><span data-en style="display:none">Territorial outreach and connection program (2014–Present)</span></h4><p><span data-es>Intervenciones semanales programadas en centros urbanos del distrito. La distribución de asistencia alimentaria actúa como herramienta metodológica inicial para romper el aislamiento crítico y establecer canales de confianza mutua.</span><span data-en style="display:none">Scheduled weekly interventions in urban centers. Food assistance distribution serves as an initial methodological tool to break critical isolation and establish mutual trust.</span></p>
           </div>
           <div class="sub-item">
-            <h4>Articulación institucional y acceso a derechos civiles</h4>
-            <p>Acompañamiento directo para la resolución de problemáticas complejas: vinculación con redes de salud, programas de alfabetización, atención a consumos problemáticos y tramitación documental (DNI).</p>
+            <h4><span data-es>Articulación institucional y acceso a derechos civiles</span><span data-en style="display:none">Institutional coordination & civil rights access</span></h4><p><span data-es>Acompañamiento directo para la resolución de problemáticas complejas: vinculación con redes de salud, programas de alfabetización, atención a consumos problemáticos y tramitación documental (DNI).</span><span data-en style="display:none">Direct support for resolving complex vulnerabilities: connection to health networks, literacy programs, substance use care and identity document processing (National ID).</span></p>
           </div>
           <div class="sub-item">
-            <h4>Desarrollo de capacidades y sostenibilidad del proyecto de vida</h4>
-            <p>Talleres formativos y espacios de contención comunitaria orientados a la reactivación de motivaciones individuales y familiares, promoviendo la autonomía y un modelo de vida fuera del espacio público.</p>
+            <h4><span data-es>Desarrollo de capacidades y sostenibilidad del proyecto de vida</span><span data-en style="display:none">Capacity building & life project sustainability</span></h4><p><span data-es>Talleres formativos y espacios de contención comunitaria orientados a la reactivación de motivaciones individuales y familiares, promoviendo la autonomía y un modelo de vida fuera del espacio público.</span><span data-en style="display:none">Training workshops and community support spaces aimed at reactivating individual and family motivations, promoting autonomy and a life model outside public spaces.</span></p>
           </div>
         </div>
       </div>
@@ -966,14 +1005,13 @@
         <div class="area-visual-icon">
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
-        <h4>Desde el origen</h4>
-        <p>El abordaje de personas en situación de calle es el corazón fundacional de la organización, activo desde 2014 de manera ininterrumpida.</p>
+        <h4><span data-es>Desde el origen</span><span data-en style="display:none">From the very beginning</span></h4><p><span data-es>El abordaje de personas en situación de calle es el corazón fundacional de la organización, activo desde 2014 de manera ininterrumpida.</span><span data-en style="display:none">Outreach to people experiencing homelessness is the founding core of the organization, active without interruption since 2014.</span></p>
         <div class="area-visual-tags">
           <span class="vtag">Lomas de Zamora</span>
-          <span class="vtag">Derechos Civiles</span>
-          <span class="vtag">Tramitación DNI</span>
-          <span class="vtag">Asistencia Alimentaria</span>
-          <span class="vtag">Salud Comunitaria</span>
+          <span class="vtag"><span data-es>Derechos Civiles</span><span data-en style="display:none">Civil Rights</span></span>
+          <span class="vtag"><span data-es>Tramitación DNI</span><span data-en style="display:none">ID Processing</span></span>
+          <span class="vtag"><span data-es>Asistencia Alimentaria</span><span data-en style="display:none">Food Assistance</span></span>
+          <span class="vtag"><span data-es>Salud Comunitaria</span><span data-en style="display:none">Community Health</span></span>
         </div>
       </div>
     </div>
@@ -981,13 +1019,10 @@
     <!-- Cultura -->
     <div class="area-panel" id="panel-cultura">
       <div class="area-panel-text">
-        <h3>Cultura e Industrias Culturales</h3>
-        <p>El área funciona como una plataforma que profesionaliza el sector cultural, entendiendo que las industrias culturales son generadoras de empleo genuino y valor para la comunidad.</p>
-        <p>El objetivo es consolidar espacios de integración y contención frente a problemáticas actuales que afectan a las juventudes, promoviendo el acceso democrático a bienes culturales y potenciando el capital social del territorio.</p>
+        <h3><span data-es>Cultura e Industrias Culturales</span><span data-en style="display:none">Culture & Cultural Industries</span></h3><p><span data-es>El área funciona como una plataforma que profesionaliza el sector cultural, entendiendo que las industrias culturales son generadoras de empleo genuino y valor para la comunidad.</span><span data-en style="display:none">The area works as a platform that professionalizes the cultural sector, understanding that cultural industries generate genuine employment and value for the community.</span></p><p><span data-es>El objetivo es consolidar espacios de integración y contención frente a problemáticas actuales que afectan a las juventudes, promoviendo el acceso democrático a bienes culturales y potenciando el capital social del territorio.</span><span data-en style="display:none">The goal is to build spaces of integration and support against issues affecting today's youth, promoting democratic access to cultural goods and strengthening the territory's social capital.</span></p>
         <div class="sub-items">
           <div class="sub-item">
-            <h4>Centro Cultural Artesresistir (Lomas de Zamora)</h4>
-            <p>Nacido en 2018 como colectivo cultural y consolidado con su espacio físico propio en 2024. Combina formación técnica y artística a través de talleres, generación de oportunidades laborales para trabajadores de la cultura, eventos abiertos y promoción de artistas locales. Funciona en articulación directa con Organización Aconcagua.</p>
+            <h4><span data-es>Centro Cultural Artesresistir (Lomas de Zamora)</span><span data-en style="display:none">Artesresistir Cultural Center (Lomas de Zamora)</span></h4><p><span data-es>Nacido en 2018 como colectivo cultural y consolidado con su espacio físico propio en 2024. Combina formación técnica y artística a través de talleres, generación de oportunidades laborales para trabajadores de la cultura, eventos abiertos y promoción de artistas locales. Funciona en articulación directa con Organización Aconcagua.</span><span data-en style="display:none">Born in 2018 as a cultural collective and consolidated with its own physical space in 2024. It combines technical and artistic training through workshops, job opportunities for cultural workers, open events and promotion of local artists. It operates in direct coordination with Organización Aconcagua.</span></p>
           </div>
         </div>
       </div>
@@ -995,14 +1030,13 @@
         <div class="area-visual-icon">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
         </div>
-        <h4>Cultura como transformación</h4>
-        <p>Espacio físico propio inaugurado en 2024 que actúa como punto de encuentro y articulación socio-cultural de la región.</p>
+        <h4><span data-es>Cultura como transformación</span><span data-en style="display:none">Culture as transformation</span></h4><p><span data-es>Espacio físico propio inaugurado en 2024 que actúa como punto de encuentro y articulación socio-cultural de la región.</span><span data-en style="display:none">Own physical space inaugurated in 2024, acting as a meeting and socio-cultural hub for the region.</span></p>
         <div class="area-visual-tags">
           <span class="vtag">Artesresistir</span>
-          <span class="vtag">Formación Artística</span>
-          <span class="vtag">Empleo Cultural</span>
-          <span class="vtag">Juventudes</span>
-          <span class="vtag">Arte Popular</span>
+          <span class="vtag"><span data-es>Formación Artística</span><span data-en style="display:none">Artistic Training</span></span>
+          <span class="vtag"><span data-es>Empleo Cultural</span><span data-en style="display:none">Cultural Employment</span></span>
+          <span class="vtag"><span data-es>Juventudes</span><span data-en style="display:none">Youth</span></span>
+          <span class="vtag"><span data-es>Arte Popular</span><span data-en style="display:none">Folk Art</span></span>
         </div>
       </div>
     </div>
@@ -1010,24 +1044,21 @@
     <!-- Transversales -->
     <div class="area-panel" id="panel-transversales">
       <div class="area-panel-text">
-        <h3>Áreas Transversales</h3>
-        <p>Las áreas transversales comprenden el núcleo de tareas estratégicas para el funcionamiento, sostén y proyección de la organización. Nutren y articulan todas las intervenciones territoriales.</p>
+        <h3><span data-es>Áreas Transversales</span><span data-en style="display:none">Cross-Cutting Areas</span></h3><p><span data-es>Las áreas transversales comprenden el núcleo de tareas estratégicas para el funcionamiento, sostén y proyección de la organización. Nutren y articulan todas las intervenciones territoriales.</span><span data-en style="display:none">The cross-cutting areas comprise the strategic core for the organization's functioning, support and projection. They inform and articulate all territorial interventions.</span></p>
         <div class="sub-items">
           <div class="sub-item">
-            <h4>Comunicación</h4>
+            <h4><span data-es>Comunicación</span><span data-en style="display:none">Communication</span></h4>
             <p>Más que difusión, transformamos nuestra labor territorial en un capital comunicacional sólido que fortalece la legitimidad ante la sociedad y actores clave.</p>
           </div>
           <div class="sub-item">
-            <h4>Formación Política</h4>
+            <h4><span data-es><span data-es>Formación Política</span><span data-en style="display:none">Political Training</span></span><span data-en style="display:none">Political Training</span></h4>
             <p>Dotamos a nuestros integrantes de marcos teóricos y metodológicos situados, promoviendo el pensamiento crítico para asegurar que nuestras intervenciones respondan a una estrategia política unificada y de largo plazo.</p>
           </div>
           <div class="sub-item">
-            <h4>Planificación, Seguimiento y Evaluación</h4>
-            <p>Aseguramos marcos lógicos con indicadores verificables, líneas de base y presupuestos consistentes. Sistematizamos información territorial en evidencia técnica para la rendición de cuentas.</p>
+            <h4><span data-es>Planificación, Seguimiento y Evaluación</span><span data-en style="display:none">Planning, Monitoring & Evaluation</span></h4><p><span data-es>Aseguramos marcos lógicos con indicadores verificables, líneas de base y presupuestos consistentes. Sistematizamos información territorial en evidencia técnica para la rendición de cuentas.</span><span data-en style="display:none">We ensure logical frameworks with verifiable indicators, baselines and consistent budgets. We systematize territorial information into technical evidence for accountability.</span></p>
           </div>
           <div class="sub-item">
-            <h4>Cooperación Internacional</h4>
-            <p>Construimos alianzas estratégicas con organismos multilaterales y fondos internacionales (cooperación Sur-Sur, Norte-Sur y triangular), posicionando a Aconcagua en el debate internacional sobre justicia social.</p>
+            <h4><span data-es>Cooperación Internacional</span><span data-en style="display:none">International Cooperation</span></h4><p><span data-es>Construimos alianzas estratégicas con organismos multilaterales y fondos internacionales (cooperación Sur-Sur, Norte-Sur y triangular), posicionando a Aconcagua en el debate internacional sobre justicia social.</span><span data-en style="display:none">We build strategic alliances with multilateral organizations and international funds (South-South, North-South and triangular cooperation), positioning Aconcagua in the international debate on social justice.</span></p>
           </div>
         </div>
       </div>
@@ -1035,14 +1066,13 @@
         <div class="area-visual-icon">
           <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <h4>Estructura de sostén</h4>
-        <p>Áreas que garantizan la coherencia política, la transparencia técnica y la proyección institucional de la organización.</p>
+        <h4><span data-es>Estructura de sostén</span><span data-en style="display:none">Support structure</span></h4><p><span data-es>Áreas que garantizan la coherencia política, la transparencia técnica y la proyección institucional de la organización.</span><span data-en style="display:none">Areas that guarantee the political coherence, technical transparency and institutional projection of the organization.</span></p>
         <div class="area-visual-tags">
-          <span class="vtag">Comunicación</span>
-          <span class="vtag">Formación Política</span>
-          <span class="vtag">Planificación</span>
-          <span class="vtag">Coop. Internacional</span>
-          <span class="vtag">Género</span>
+          <span class="vtag"><span data-es>Comunicación</span><span data-en style="display:none">Communication</span></span>
+          <span class="vtag"><span data-es><span data-es>Formación Política</span><span data-en style="display:none">Political Training</span></span><span data-en style="display:none">Political Training</span></span>
+          <span class="vtag"><span data-es>Planificación</span><span data-en style="display:none">Planning</span></span>
+          <span class="vtag"><span data-es><span data-es>Coop. Internacional</span><span data-en style="display:none">Intl. Cooperation</span></span><span data-en style="display:none">Intl. Cooperation</span></span>
+          <span class="vtag"><span data-es>Género</span><span data-en style="display:none">Gender</span></span>
         </div>
       </div>
     </div>
@@ -1108,7 +1138,7 @@
         </div>
         <span style="color:var(--white);font-weight:700;font-size:15px;">Organización Aconcagua</span>
       </div>
-      <p>Asociación político-social y comunitaria dedicada a la promoción, defensa y restitución integral de los Derechos Humanos. Conurbano Bonaerense y Santiago del Estero, desde 2014.</p>
+      <p><span data-es>Asociación político-social y comunitaria dedicada a la promoción, defensa y restitución integral de los Derechos Humanos. Conurbano Bonaerense y Santiago del Estero, desde 2014.</span><span data-en style="display:none">A political-social and community association dedicated to the promotion, defense and full restitution of Human Rights. Greater Buenos Aires and Santiago del Estero, since 2014.</span></p>
     </div>
     <div class="footer-col">
       <h4><span data-es>Navegación</span><span data-en style="display:none">Navigation</span></h4>
@@ -1118,7 +1148,7 @@
         <li><a href="#valores"><span data-es>Valores</span><span data-en style="display:none">Values</span></a></li>
         <li><a href="#areas"><span data-es>Áreas de Acción</span><span data-en style="display:none">Action Areas</span></a></li>
         <li><a href="#transparencia"><span data-es>Transparencia</span><span data-en style="display:none">Transparency</span></a></li>
-        <li><a href="#sumate">Sumate</a></li>
+        <li><a href="#sumate"><span data-es>Sumate</span><span data-en style="display:none">Join Us</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
